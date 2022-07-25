@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/Aisha-Yusuff/Bank-tech-test#readme",
   "dependencies": {
-    "jest": "^28.1.3"
+    "jest": "^28.1.3",
+    "mermaid": "^9.1.3"
   },
   "devDependencies": {
     "eslint": "^8.20.0",
