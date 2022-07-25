@@ -23,7 +23,7 @@ date || credit || debit || balance
 
 ### UML Class Diagram
 
-This diagrams displays the class - Bank Account which is used to create the users bank statement.
+This diagrams displays the main class of this command line application - BankAccount.
 
 ```mermaid
 classDiagram
