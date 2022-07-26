@@ -166,4 +166,4 @@ $ const account = new bankAccount()
 
 Then you can use all the class methods and print a statement like this:
 
-![Screenshot of node running in the terminal](https://imgur.com/a/e1UkLXA.png)
+[![Screenshot of bankAccount in node](https://i.postimg.cc/5t0TWJzf/bank-Account-screenshot-2.png)](https://postimg.cc/cvpXfVTz)
