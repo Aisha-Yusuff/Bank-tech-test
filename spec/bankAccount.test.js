@@ -87,4 +87,14 @@ describe("bankAccount", () => {
       "date || credit || debit || balance\n14/01/2023 ||  || 500 || 2500\n13/01/2023 || 2000 ||  || 3000\n10/01/2023 || 1000 ||  || 1000"
     );
   });
+
+  it("displays an error message if debit is higher than balance", () => {
+    const account = new bankAccount();
+    account.transactionDate("10/01/2023");
+    account.addDeposit(1000);
+    account.addWithdrawal(2000);
+    expect(account.calculateBalance()).toEqual(
+      "This withdrawal exceeds the current balance."
+    );
+  });
 });

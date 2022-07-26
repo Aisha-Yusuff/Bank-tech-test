@@ -25,19 +25,22 @@ date || credit || debit || balance
 
 This diagrams displays the main class of this command line application - BankAccount.
 
-<!---```mermaid
+-```mermaid
 classDiagram
 class BankAccount
-BankAccount: -String date
-BankAccount: -Integer amount
-BankAccount: +getTransactionDate(date)
+BankAccount: -Array this.transaction
+BankAccount: -Integer this.index
+BankAccount: -Array this.balance
+BankAccount: +transactionDate(date)
 BankAccount: +addDeposit(amount)
 BankAccount: +addWithdrawal(amount)
 BankAccount: +calculateBalance()
 BankAccount: +printStatement()
+
 ```
---->
+-
 
 ### Inputs and Outputs
 
 This diagram displays the expected inputs and outputs of this application.
+```
