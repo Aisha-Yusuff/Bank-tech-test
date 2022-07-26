@@ -8,29 +8,15 @@ describe("bankAccount", () => {
     );
   });
 
-  it("should display the column names and their values in the bank statement", () => {
-    const account = new bankAccount();
-    account.transactionDate(0);
-    account.addDeposit(0);
-    account.addWithdrawal(0);
-    account.calculateBalance();
-    expect(account.printStatement()).toEqual(
-      "date || credit || debit || balance\n0 || 0 || 0 || 0"
-    );
-  });
-
   it("should display the column names and the date value in the bank statement", () => {
     const account = new bankAccount();
     account.transactionDate("14/01/2023");
-    account.addDeposit(0);
-    account.addWithdrawal(0);
-    account.calculateBalance();
     expect(account.printStatement()).toEqual(
-      "date || credit || debit || balance\n14/01/2023 || 0 || 0 || 0"
+      "date || credit || debit || balance\n14/01/2023"
     );
   });
 
-  it("displays the balance as a difference between the credit and debit", () => {
+  xit("displays the balance as a difference between the credit and debit", () => {
     const account = new bankAccount();
     account.transactionDate("14/01/2023");
     account.addDeposit(1000);
@@ -38,6 +24,16 @@ describe("bankAccount", () => {
     account.calculateBalance();
     expect(account.printStatement()).toEqual(
       "date || credit || debit || balance\n14/01/2023 || 1000 || 500 || 500"
+    );
+  });
+
+  xit("displays a bank statement even if a deposit was not made in the transaction", () => {
+    const account = new bankAccount();
+    account.transactionDate("14/01/2023");
+    account.addDeposit(500);
+    account.calculateBalance();
+    expect(account.printStatement()).toEqual(
+      "date || credit || debit || balance\n14/01/2023 || 500 ||  || 500"
     );
   });
 });
