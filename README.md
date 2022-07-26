@@ -21,17 +21,12 @@ date || credit || debit || balance
 
 ### User Stories
 
-<<<<<<< HEAD
 Here is a list of user stories I made in order to create this application:
 
-```bash
-=======
 ```
-
-> > > > > > > 9df717ea5046386a75ea1dd2ca7b7ca2bd55c920
-> > > > > > > As an account owner
-> > > > > > > So that I can store my money in my account
-> > > > > > > I would like to deposit money in my account
+As an account owner
+So that I can store my money in my account
+I would like to deposit money in my account
 
 ```
 
@@ -57,7 +52,7 @@ As an account owner
 So that I can have regular access to my account
 I would like to make withdrawals and deposits from my account on multiple days
 
-````
+```
 
 ## Diagrams
 
@@ -76,7 +71,7 @@ BankAccount: +addDeposit(amount)
 BankAccount: +addWithdrawal(amount)
 BankAccount: +calculateBalance()
 BankAccount: +printStatement()
-````
+```
 
 ### Inputs and Outputs
 
