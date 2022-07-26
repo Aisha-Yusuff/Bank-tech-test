@@ -27,19 +27,19 @@ So that I can store my money in my account
 I would like to be able to deposit money in my account
 ```
 
-```bash
+```
 As an account owner
 So that I can access my in my account
 I would like to be able to withdraw money from my account
 ```
 
-```bash
+```
 As an account owner
 So that I am aware of the activity of my account
 I would like to be able to see a statement of my account with dates, credits, debits and balances
 ```
 
-```bash
+```
 As an account owner
 So that I can have regular access to my account
 I would like to be make withdrawls and deposits on multiple days
