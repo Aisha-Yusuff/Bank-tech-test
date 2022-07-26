@@ -43,4 +43,11 @@ BankAccount: +printStatement()
 ### Inputs and Outputs
 
 This diagram displays the expected inputs and outputs of this application.
+
+| input                                                                                                                                                                             | output                                                                          |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| bankAccount.transactionDate("14/01/2023");    bankAccount.addDeposit(1000);        bankAccount.calculateBalance(); bankAccount.printStatement();                                  | date \|\| credit \|\| debit \|\| balance 14/01/2023 \|\| 1000 \|\|  \|\| 1000   |
+| bankAccount.transactionDate("14/01/2023");    bankAccount.addDeposit(1000);     bankAccount.addWithdrawal(500);     bankAccount.calculateBalance(); bankAccount.printStatement(); | date \|\| credit \|\| debit \|\| balance 14/01/2023 \|\| 1000 \|\| 500 \|\| 500 |
+| bankAccount.transactionDate("14/01/2023"); bankAccount.addDeposit(1000);    bankAccount.addWithdrawl(2000);        bankAccount.calculateBalance(); bankAccount.printStatement();  | This withdrawal exceeds the current balance.                                    |
+
 ```
