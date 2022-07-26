@@ -55,4 +55,18 @@ describe("bankAccount", () => {
       "date || credit || debit || balance\n14/01/2023 || 500 ||  || 500"
     );
   });
+
+  it("displays a bank statement for multiple transactions", () => {
+    const account = new bankAccount();
+    account.transactionDate("10/01/2023");
+    account.addDeposit(1000);
+    account.calculateBalance();
+
+    account.transactionDate("13/01/2023");
+    account.addDeposit(2000);
+    account.calculateBalance();
+    expect(account.printStatement()).toEqual(
+      "date || credit || debit || balance\n13/01/2023 || 2000 ||  || 3000\n10/01/2023 || 1000 ||  || 1000"
+    );
+  });
 });
