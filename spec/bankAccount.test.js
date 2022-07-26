@@ -25,6 +25,16 @@ describe("bankAccount", () => {
     );
   });
 
+  it("should display the column names and the date value in the bank statement", () => {
+    const account = new bankAccount();
+    account.transactionDate("14/01/2023");
+    account.addDeposit(100);
+    account.addWithdrawal(50);
+    expect(account.printStatement()).toEqual(
+      "date || credit || debit || balance\n14/01/2023 || 100 || 50"
+    );
+  });
+
   xit("displays the balance as a difference between the credit and debit", () => {
     const account = new bankAccount();
     account.transactionDate("14/01/2023");
