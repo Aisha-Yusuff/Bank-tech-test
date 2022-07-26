@@ -165,3 +165,5 @@ $ const account = new bankAccount()
 ```
 
 Then you can use all the class methods and print a statement like this:
+
+![Screenshot of node running in the terminal] (images/bankAccount-screenshot 2.png)
