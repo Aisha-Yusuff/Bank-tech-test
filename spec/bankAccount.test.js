@@ -46,7 +46,7 @@ describe("bankAccount", () => {
     );
   });
 
-  xit("displays a bank statement even if a deposit was not made in the transaction", () => {
+  it("displays a bank statement even if a withdrawal was not made in the transaction", () => {
     const account = new bankAccount();
     account.transactionDate("14/01/2023");
     account.addDeposit(500);
