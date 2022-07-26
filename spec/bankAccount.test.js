@@ -35,7 +35,7 @@ describe("bankAccount", () => {
     );
   });
 
-  xit("displays the balance as a difference between the credit and debit", () => {
+  it("displays the balance as a difference between the credit and debit", () => {
     const account = new bankAccount();
     account.transactionDate("14/01/2023");
     account.addDeposit(1000);
