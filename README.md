@@ -155,7 +155,7 @@ $ node
 Create a variable and require the bankAccount class:
 
 ```
-$ const bankAccount = require("<file-path>/bankAccount.js")
+$ const bankAccount = require("../lib/bankAccount")
 ```
 
 create an instance of the class:
@@ -166,4 +166,4 @@ $ const account = new bankAccount()
 
 Then you can use all the class methods and print a statement like this:
 
-[![Screenshot of bankAccount in node](https://i.postimg.cc/5t0TWJzf/bank-Account-screenshot-2.png)](https://postimg.cc/cvpXfVTz)
+[![Screenshot of bankAccount in node](https://i.postimg.cc/8zCZnVxD/Screenshot-2022-07-26-at-19-41-05.png)](https://postimg.cc/dLzRLgqS)
