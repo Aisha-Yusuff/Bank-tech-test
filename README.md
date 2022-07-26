@@ -21,6 +21,8 @@ date || credit || debit || balance
 
 ### User Story
 
+Here is a list of user stories I made in order to create this application:
+
 ```bash
 As an account owner
 So that I can store my money in my account
@@ -82,3 +84,47 @@ This command line application was created using
 - Jest v28.1.2
 - Node v18.5.0
 - Npm v8.12.1
+
+## How to Get Started
+
+To run this command line application, you will need to enter this into your command line:
+
+```
+# Clone this repository
+$ git clone https://github.com/Aisha-Yusuff/Bank-tech-test
+```
+
+```
+# Go into the repository
+$ cd bank-tech-test
+```
+
+```
+# Install npm
+$ npm install
+```
+
+```
+# Initialise the NPM project (this will create a file package.json)
+$ npm init -y
+```
+
+```
+# Add the jest package to your project
+$ npm add jest
+```
+
+```
+# Also install jest "globally"
+$ npm install -g jest
+```
+
+```
+#You can then run test using this command
+$ jest
+```
+
+```
+#Install ESlint
+$ npm init @eslint/config
+```
