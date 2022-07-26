@@ -12,16 +12,16 @@ This is a command line application that allows a user to view their bank stateme
 **When** she prints her bank statement  
 **Then** she would see
 
-```bash
+```
 date || credit || debit || balance
 14/01/2023 || || 500.00 || 2500.00
 13/01/2023 || 2000.00 || || 3000.00
 10/01/2023 || 1000.00 || || 1000.00
 ```
 
-### User Story
+### User Stories
 
-```bash
+```
 As an account owner
 So that I can store my money in my account
 I would like to be able to deposit money in my account
