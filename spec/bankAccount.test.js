@@ -16,7 +16,7 @@ describe("bankAccount", () => {
     );
   });
 
-  it("should display the column names and the date value in the bank statement", () => {
+  it("should display the column names and the credit value in the bank statement", () => {
     const account = new bankAccount();
     account.transactionDate("14/01/2023");
     account.addDeposit(100);
@@ -25,7 +25,7 @@ describe("bankAccount", () => {
     );
   });
 
-  it("should display the column names and the date value in the bank statement", () => {
+  it("should display the column names and the debit value in the bank statement", () => {
     const account = new bankAccount();
     account.transactionDate("14/01/2023");
     account.addDeposit(100);
