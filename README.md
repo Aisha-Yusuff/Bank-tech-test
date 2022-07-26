@@ -94,10 +94,11 @@ This command line application was created using
 
 ## How to Get Started
 
-To run this command line application, you will need to enter this into your command line:
+To be able to run this command line application, you will need install the following packages:
+
+Clone this repository
 
 ```
-# Clone this repository
 $ git clone https://github.com/Aisha-Yusuff/Bank-tech-test
 ```
 
