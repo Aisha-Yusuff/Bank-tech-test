@@ -102,37 +102,66 @@ Clone this repository
 $ git clone https://github.com/Aisha-Yusuff/Bank-tech-test
 ```
 
+Go into the repository
+
 ```
-# Go into the repository
 $ cd bank-tech-test
 ```
 
+Install npm
+
 ```
-# Install npm
 $ npm install
 ```
 
+Initialise the NPM project (this will create a file package.json)
+
 ```
-# Initialise the NPM project (this will create a file package.json)
 $ npm init -y
 ```
 
+Add the jest package to your project
+
 ```
-# Add the jest package to your project
 $ npm add jest
 ```
 
+Also install jest "globally"
+
 ```
-# Also install jest "globally"
 $ npm install -g jest
 ```
 
+You can then run test using this command
+
 ```
-#You can then run test using this command
 $ jest
 ```
 
+Install ESlint
+
 ```
-#Install ESlint
 $ npm init @eslint/config
 ```
+
+## How To Run This Application
+
+In order to run this application, launch the node shell:
+
+```
+$ node
+```
+
+Create a variable and require the bankAccount class:
+
+```
+$ const bankAccount = require("<file-path>/bankAccount.js")
+```
+
+create an instance of the class:
+
+```
+$ const account = new bankAccount()
+```
+
+Then you can use all the class methods and print a statement like this:
