@@ -10,7 +10,7 @@ describe("Account", () => {
       new Transaction("14/01/2023", 500, "withdrawal")
     );
     bankAccount.calculateBalance();
-    bankAccount.createStatementRows();
+    bankAccount.createStatement();
     expect(bankAccount.printStatement()).toEqual(
       "date || credit || debit || balance" +
         "\n" +
