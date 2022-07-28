@@ -70,6 +70,7 @@ This diagrams displays the main class of this command line application - BankAcc
 
 ```mermaid
 classDiagram
+BankAccount  <|-- Transaction
 class BankAccount
 BankAccount: -Array this.allTransactions
 BankAccount: -Integer this.balance
@@ -80,8 +81,6 @@ BankAccount: +calculateBalance()
 BankAccount: +overdrawn() string
 BankAccount: +createStatement()
 BankAccount: +printStatement() string
-
-class BankAccount  <|-- class Transaction
 
 class Transaction
 Transaction: -String this.date
