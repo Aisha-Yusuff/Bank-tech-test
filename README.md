@@ -77,9 +77,9 @@ BankAccount: -String this.eachRow
 BankAccount: -Array this.allRows
 BankAccount: +addTransaction(transaction)
 BankAccount: +calculateBalance()
-BankAccount: +overdrawn() :string
+BankAccount: +overdrawn() string
 BankAccount: +createStatement()
-BankAccount: +printStatement() :string
+BankAccount: +printStatement() string
 
 class BankAccount  <|-- class Transaction
 
