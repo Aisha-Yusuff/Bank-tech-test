@@ -54,6 +54,14 @@ I would like to make withdrawals and deposits from my account on multiple days
 
 ```
 
+```
+
+As an account owner
+So that I don't use my overdraft
+I would like to be notified if my withdrawal exceeds the amount of money I have in my account
+
+```
+
 ## Diagrams
 
 ### UML Class Diagram
@@ -63,16 +71,25 @@ This diagrams displays the main class of this command line application - BankAcc
 ```mermaid
 classDiagram
 class BankAccount
-BankAccount: -Array this.transaction
-BankAccount: -Integer this.index
-BankAccount: -Array this.balance
-BankAccount: +transactionDate(date)
-BankAccount: +addDeposit(amount)
-BankAccount: +addWithdrawal(amount)
+BankAccount: -Array this.allTransactions
+BankAccount: -Integer this.balance
+BankAccount: -String this.eachRow
+BankAccount: -Array this.allRows
+BankAccount: +addTransaction(transaction)
 BankAccount: +calculateBalance()
-BankAccount: +printStatement()
+BankAccount: +overdrawn() :string
+BankAccount: +createStatement()
+BankAccount: +printStatement() :string
+
+class BankAccount  <|-- class Transaction
+
+class Transaction
+Transaction: -String this.date
+Transaction: -Integer this.amount
+Transaction: -String this.type
 ```
 
+<!--
 ### Inputs and Outputs
 
 This diagram displays the expected inputs and outputs of this application.
@@ -81,7 +98,7 @@ This diagram displays the expected inputs and outputs of this application.
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | bankAccount.transactionDate("14/01/2023"); bankAccount.addDeposit(1000); bankAccount.calculateBalance(); bankAccount.printStatement();                                 | date \|\| credit \|\| debit \|\| balance 14/01/2023 \|\| 1000 \|\| \|\| 1000    |
 | bankAccount.transactionDate("14/01/2023"); bankAccount.addDeposit(1000); bankAccount.addWithdrawal(500); bankAccount.calculateBalance(); bankAccount.printStatement(); | date \|\| credit \|\| debit \|\| balance 14/01/2023 \|\| 1000 \|\| 500 \|\| 500 |
-| bankAccount.transactionDate("14/01/2023"); bankAccount.addDeposit(1000); bankAccount.addWithdrawl(2000); bankAccount.calculateBalance(); bankAccount.printStatement(); | This withdrawal exceeds the current balance.                                    |
+| bankAccount.transactionDate("14/01/2023"); bankAccount.addDeposit(1000); bankAccount.addWithdrawl(2000); bankAccount.calculateBalance(); bankAccount.printStatement(); | This withdrawal exceeds the current balance.                                    | -->
 
 ## Technologies
 
@@ -144,7 +161,7 @@ Install ESlint
 $ npm init @eslint/config
 ```
 
-## How To Run This Application
+<!-- ## How To Run This Application
 
 In order to run this application, launch the node shell:
 
@@ -166,4 +183,4 @@ $ const account = new bankAccount()
 
 Then you can use all the class methods and print a statement like this:
 
-[![Screenshot of bankAccount in node](https://i.postimg.cc/tTzPjsVc/Screenshot-2022-07-26-at-19-41-05.png)](https://postimg.cc/bDsd0Ng0)
+[![Screenshot of bankAccount in node](https://i.postimg.cc/tTzPjsVc/Screenshot-2022-07-26-at-19-41-05.png)](https://postimg.cc/bDsd0Ng0) -->
