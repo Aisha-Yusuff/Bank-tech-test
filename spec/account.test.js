@@ -25,9 +25,11 @@ describe("Account", () => {
   it("returns a string if a withdrawal is larger than the account's balance", () => {
     const bankAccount = new Account();
     bankAccount.addTransaction(new Transaction("10/01/2023", 1000, "deposit"));
-    bankAccount.addTransaction(new Transaction("13/01/2023", 2000, "deposit"));
+    bankAccount.addTransaction(
+      new Transaction("13/01/2023", 2000, "withdrawal")
+    );
     bankAccount.calculateBalance();
-    expect(bankAccount.overdrawn()).toBe(
+    expect(bankAccount.overdrawn()).toEqual(
       "This withdrawal exceeds your account's current balance. All withdrawals must be below the account's balance"
     );
   });
